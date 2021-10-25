@@ -1,3 +1,4 @@
+//função de teste
 function TestePromise()
 {
     return new Promise(function(resolve, reject)
