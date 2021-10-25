@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+       <script>
+
+           //Spread com objetos
+           var nomes = [
+               {
+                   nome: 'André'
+               },
+               {
+                   nome: "felipe"
+               }
+           ]
+
+           const objetos = [...nomes, 
+           {
+               nome: 'Guilherme'
+           }]
+
+           console.log(objetos);
+
+           //rest
+           function testes(...nomes)
+           {
+               console.log(nomes);
+           }
+
+           testes(1,2,3,4,5,6,7,{nome: 'andré'},['casa','carro',{marca: 'pegeout'}]);
+           
+       </script>
+    </body>
+</html>

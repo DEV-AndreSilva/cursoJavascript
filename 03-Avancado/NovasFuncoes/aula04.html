@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+          //Destruct
+          const array_nomes = ['André', 'Luis', 'Mario'];
+
+          //Cada constante vai receber um valor do array
+          const [a,b,c] = array_nomes;
+
+          alert(a); //André
+          alert(b); //Luis
+          alert(c); //Mario
+
+          //Spread
+          const array_nomes02 = ['André', 'Luis', 'Mario', 'Karina', 'Carlos','Maria'];
+          const [nome01, nome02, ...nomes] = array_nomes02;
+
+          alert(nome01);   // André
+          alert(nome02);   //Luis
+          alert(nomes);    //Mario, Karina, Carlos, Maria
+          alert(nomes[1]); //Karina
+        </script>
+    </body>
+</html>

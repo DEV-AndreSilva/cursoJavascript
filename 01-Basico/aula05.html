@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>    
+    <body>
+        <script>
+            // Função em javascript
+            function testes()
+            {
+                console.log("Usando a função teste");
+            }
+
+            function nomes(nome)
+            {
+                console.log("O nome passado e: "+nome);
+            }
+
+            function pegarNome(parametro)
+            {
+                if(parametro==1)
+                {
+                    return "Andre";
+                }
+                else
+                {
+                    return "Outro nome";
+                }
+                
+            }
+
+            // Testando funções
+            nomes("Andre");
+            nomes("Luis");
+
+            var nome = pegarNome(1);
+            var nome2 = pegarNome(5);
+
+            console.log(nome);
+            console.log(nome2);
+
+            // Outra forma de declarar função
+            var func = function()
+            {
+                alert("Ola mundo 1 !");
+            }
+
+            // Chamada de função
+            func();
+
+            (function(){ 
+                alert("Ola mundo");
+            })();
+
+        </script>
+    </body>
+</html>

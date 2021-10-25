@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //Criação de uma Classe com JavaScript
+            class Animal
+            {
+
+                //Método construtor
+                constructor(nome)
+                {
+                    this.nome =  nome;
+                }
+
+                printNome()
+                {
+                    return this.nome;
+                }
+            }
+
+            //Herança de classes com JavaScript
+            class Cachorro extends Animal
+            {
+                constructor(nome)
+                {
+                    super(nome);//invocando o construtor da classse pai
+                    this.raca = "Pintcher";
+                }
+            }
+
+            //Instanciando um objeto da classe
+            animal = new Animal("Cachorro");
+            pluto =  new Cachorro('Cão');
+            
+            //Acessando atributos e métodos da classe
+            alert(animal.nome); //Cachorro
+            alert(animal.printNome()); //Cachorro
+            alert(pluto.printNome()); //Cão
+            alert(pluto.raca); //Pintcher
+
+        </script>
+    </body>
+</html>

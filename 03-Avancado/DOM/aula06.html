@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            }
+
+            .animEsquerda{
+                transition: 1s;
+                margin-left: 100px;
+                margin-top: 50px;
+                background-color: darkblue;
+                height: 150px;
+                width: 150px;
+            }
+        </style>
+
+        <div class="box">
+
+        </div>
+        <br>
+        <input type="button" class="submit" id="myBtn" value="enviar">
+
+        <script>
+            var box = document.querySelectorAll('.box')[0];
+           
+           /* setTimeout(()=>{
+                box.classList.add('animEsquerda');
+            })*/
+
+            box.addEventListener('mousemove', function(){
+                box.classList.add('animEsquerda');
+            })
+
+            document.getElementById("myBtn").addEventListener("click", function() {
+            this.style.backgroundColor = "red";
+});
+        </script>
+    </body>
+</html>

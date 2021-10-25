@@ -1,0 +1,41 @@
+<!--<!DOCTYPE html> -->
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+        
+        <div class="box">
+            
+        </div>
+        
+        <div class="box">
+            
+        </div>
+        
+        <div class="box">
+            
+        </div>
+
+        <script>
+            var elementos = document.getElementsByClassName("box");
+
+            for(var i = 0; i<elementos.length; i++)
+            {
+                elementos[i].style.width = 100; //largura
+                elementos[i].style.height = 100; //altura
+                elementos[i].style.backgroundColor='green'; //cor de fundo
+                elementos[i].style.margin=10; //margem
+                elementos[i].style.borderWidth=2; //tamanho da borda
+                elementos[i].style.borderColor = 'blue'; //cor da borda 
+                elementos[i].style.borderStyle='dotted'; //estilo da borda
+                elementos[i].style.paddingTop=10; //padding
+            }
+        </script>
+
+        
+    </body>
+</html>

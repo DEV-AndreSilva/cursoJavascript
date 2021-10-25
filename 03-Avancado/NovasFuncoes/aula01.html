@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="texto">
+            usai
+        </div>
+        <script>
+            var nome = "André";
+
+            //Template string
+            var conteudo = `
+            Podemos
+            escrever
+            quebrando 
+            as linhas,
+            colocando variaveis como nome ${nome}
+            que o navegador vai entender
+            como uma 
+            unica 
+            string
+            `;
+
+            var texto = document.querySelector(".texto");
+            texto.innerHTML=conteudo;
+        </script>
+    </body>
+</html>

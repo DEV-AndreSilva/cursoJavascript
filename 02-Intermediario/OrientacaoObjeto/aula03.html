@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+            // "classe pessoa"
+            function Pessoa(Nome, Idade)
+            {
+                this.Nome = Nome;
+                this.Idade = Idade;
+
+                this.returnAnimal =  function(Animal)
+                {
+                    return Animal;
+                }
+            }
+
+            //"classe animal"
+              Animal = function(Nome, Peso)
+                {
+                    this.nome = Nome;
+                    this.peso = Peso;
+                    
+                    if(Nome == undefined)
+                    {
+                        this.nome = "Cachorro";
+                    }
+
+                    if(Peso == undefined)
+                    {
+                        this.peso = '5KG';
+                    }
+
+                }
+
+                var pessoa1 = new Pessoa('Andre', 20);
+                var animal1 = new Animal('cachorro','8Kg');
+
+                alert("Animal: "+animal1.nome+" Peso: "+animal1.peso);
+
+                alert(pessoa1.returnAnimal(animal1).peso); //8Kg
+        </script>
+    </body>
+</html>

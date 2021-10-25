@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <div class="testes">
+            <div class="inside-testes">
+                texto
+            </div>
+        </div>
+        
+        <div class="testes">
+            <div class="inside-testes">
+              outro  texto
+            </div>
+        </div>
+
+        <script>
+            var els = document.querySelectorAll('.testes');
+            els[0].style.color = "red";
+            els[0].innerHTML = "Oi";
+            els[1].innerHTML = '<div class"inside-teste-js">terceiro teste</div>'; //alterando o conteudo da claase teste posiçao 01
+        </script>
+
+    </body>
+</html>

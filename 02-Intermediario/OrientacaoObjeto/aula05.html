@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+
+            //Objeto de Data JavaScript
+            //var date = new Date();
+
+            //alert(date.getDate()); //Pegar o dia atual
+
+            //alert(date.getDay()); //Pegar Dia da Semana
+
+            //alert(date.getFullYear()) //Pegar o Ano
+
+            var date =  new Date('10/25/2020');
+
+            alert(date.getDate()); //Dia 25
+
+            var date2 =  new Date('11/10/2020');
+
+            var diferenca =  (date2.getTime()-date.getTime()) / (1000*3600*24);
+
+            alert(diferenca); //Resultado da diferença entre as datas
+
+        </script>
+    </body>
+</html>

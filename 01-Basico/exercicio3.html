@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<htm>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+            //Exercicio 3  - Projeto de calculadora simples
+
+            var numeroInicial = prompt("Informe o 1º número");
+            var numeroFinal = prompt("Informe o 2º número");
+
+            sinalIvalido = true;
+            while(sinalIvalido)
+            {
+                var sinal = prompt("Informe o sinal da operação");
+                if(sinal == "+" || sinal == "-" || sinal == "/" || sinal == "*")
+                {
+                    numeroInicial=parseInt(numeroInicial); //convertendo a string recebida para inteiro
+                    numeroFinal=parseInt(numeroFinal);
+
+                    if(sinal == '+')
+                    {
+                        var resultado = numeroInicial + numeroFinal;
+                    }
+                    
+                    else if(sinal == '-')
+                    {
+                        var resultado = numeroInicial - numeroFinal;
+                    }
+                    
+                    else if(sinal == '/')
+                    {
+                        if(numeroFinal !=0)
+                        {
+                            var resultado = numeroInicial / numeroFinal;
+                        }
+                        else
+                        {
+                            alert("Não existe divisão por 0");
+                        }
+                    }
+                    else
+                    {
+                        var resultado = numeroInicial * numeroFinal;
+                    }
+                    
+                    if(isNaN(resultado))
+                    {
+                        alert("Não há resultado final");
+                    }
+                    else{
+                        alert("O resultado final é: "+resultado);
+                    }
+                   
+                    sinalIvalido = false;
+                }
+                else
+                {
+                    alert("Informe um sinal valido")
+                }
+            }
+        </script>
+    </body>
+</htm>
