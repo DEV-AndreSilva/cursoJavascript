@@ -1,0 +1,15 @@
+.align{
+    display: flex;
+}
+
+.player-options img{
+    max-width: 200px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.enemy-options img{
+    max-width: 200px;
+    opacity: 0.4;
+    cursor: pointer;
+}
