@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.artigo{
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.artigo2{
+    width: 100%;
+    background-color: blue;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
