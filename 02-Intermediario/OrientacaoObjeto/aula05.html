@@ -3,6 +3,10 @@
     <head>
     </head>
     <body>
+
+        <input type="date" name="dataEscolha">
+
+        <input type="submit" name="botao" value="enviar">
         <script>
             //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 
@@ -15,15 +19,76 @@
 
             //alert(date.getFullYear()) //Pegar o Ano
 
-            var date =  new Date('10/25/2020');
+            document.querySelector('input[name=botao]').addEventListener('click',()=>
+            {
+                //tela pre guarnição
+                var data = document.querySelector("input[type=date]").value;
+                
+                if(data != "")
+                {
+                    var date =  new Date(data); //pode receber o parametro da data escolhida "mês/dia/ano"
+                    date.setDate(date.getDate()+1); //soma 1 dia  a data passada
 
-            alert(date.getDate()); //Dia 25
+                    //console.log(day.getDay()); retorna o dia da semana, 0 para domingo
 
-            var date2 =  new Date('11/10/2020');
+                    var firstDayofWeek = true
 
-            var diferenca =  (date2.getTime()-date.getTime()) / (1000*3600*24);
+                    while(firstDayofWeek)
+                    {
+                        if(date.getDay()==0)
+                        {
+                            firstDayofWeek = false;
+                        }
+                        else
+                        {
+                            date.setDate(date.getDate()-1);
+                        }
+                        
+                    }
 
-            alert(diferenca); //Resultado da diferença entre as datas
+                    var dates_array = [];
+                    
+                    for(let i =0; i<7; i++)
+                    {
+                        let nova_data = new Date(date);
+                        nova_data.setDate(nova_data.getDate()+i);
+                        dates_array.push(nova_data);
+                    }
+                   
+                    function formatDate(date)
+                    {
+                        let dia =date.getDate();
+                        let mes = parseInt(date.getMonth())+1;
+                        let ano = date.getFullYear();
+                        
+                        let dia_brasil = (dia+"/"+mes+"/"+ano);
+                        return dia_brasil;
+                    }
+
+                    var array_dia_exibir = [];
+
+                    dates_array.forEach(element => 
+                    {
+                        let dia = formatDate(element);
+                        array_dia_exibir.push(dia);    
+                    });
+
+                    console.log(array_dia_exibir);
+
+                }
+
+                
+
+            
+            });
+
+           
+
+            //var date2 =  new Date('11/10/2020');
+
+           // var diferenca =  (date2.getTime()-date.getTime()) / (1000*3600*24);
+
+           // alert(diferenca); //Resultado da diferença entre as datas
 
         </script>
     </body>
