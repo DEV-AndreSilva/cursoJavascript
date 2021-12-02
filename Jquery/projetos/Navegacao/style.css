@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+nav{
+    text-align: center;
+    background-color: #2b437d;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 15px;
+    font-size: 20px;
+    padding: 10px;
+    
+    
+}
+
+nav ul li:hover{
+    background-color: rgb(76, 125, 173);
+    border: lightslategray;
+    border-radius: 25%;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
