@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    max-height: 700px;
+  /*  background-color: #ccc;*/
+    margin: 0 auto;
+}
+
+.slider img{
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.bullets-nav
+{
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%);
+}
+
+.bullets-nav span{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin: 0 20px;
+    float: left; /* funcionar a margim do elemento span*/
+}
+
