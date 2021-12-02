@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .btn{
+            width: 80%;
+            max-width: 200px;
+            height: 70px;
+            color: white;
+            font-size: 22px;
+            line-height: 70px;
+            background-color: darkcyan;
+            text-align: center;
+            cursor: pointer;
+            border: 1px black solid;
+            border-radius: 35px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%);
+        }
+
+        .btn:hover{
+            opacity: 0.9;
+            border: 1.5px black solid;
+        }
+
+        .bg{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.6);
+            
+        }
+        .closeBtn{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #DDD;
+            position: absolute;
+            right: 5;
+            top: 5;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .closeBtn:hover{
+            background-color: #bbb;
+        }
+
+        .form{
+            background-color: white;
+            max-width: 350px;
+            min-height: 350px;
+            max-height: 400px;
+            padding-bottom: 15px;
+            padding-left: 2%;
+            padding-right: 2%;
+            height: 50%;
+            width: 60%;
+            border:2px solid #ccc;
+            border-radius: 10%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%);
+        }
+
+        .form input[type=text]{
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            padding-left: 10%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            border: 1px solid #ccc;
+            font-size: 22px;
+            
+        }
+
+        .cadastro{
+            width: 50%;
+            height: 40px;
+            color: white;
+            font-size: 22px;
+            line-height: 40px;
+            background-color: steelblue;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px; 
+            text-align: center;
+            margin-left: 25%;
+        }
+
+        .cadastro:hover{
+            opacity: 0.9;
+        }
+
+        h1{
+            text-align: center;
+            color: lightslategrey;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bg">
+
+    <form>        
+        <div class="form">
+            <div class="closeBtn">X</div>
+            <h1>Cadastrar</h1>
+            <input required placeholder="Nome" type="text" name="nome">
+            <input required placeholder="Telefone" type="text" name="telefone">
+            <input required placeholder="E-mail" type="text" name="email">
+            <input type="submit" value="Enviar" class="cadastro">
+        </div>
+    </form>
+
+</div>
+
+
+<div class="btn">
+    Entrar em contato
+</div>
+
+
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>
